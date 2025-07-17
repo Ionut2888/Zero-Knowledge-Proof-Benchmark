@@ -1,0 +1,19 @@
+import "hashes/poseidon/poseidon.zok" as poseidon;
+
+def main(
+    field leaf,
+    field[15] proof,
+    bool[15] indexBits,
+    field root
+) -> bool {
+    field mut currHash = leaf;
+
+    for u32 i in 0..15 {
+        
+        currHash = indexBits[i]
+            ? poseidon([proof[i], currHash])   // If bit is 1, proof on left
+            : poseidon([currHash, proof[i]]);  // If bit is 0, proof on right
+    }
+
+    return currHash == root;
+}

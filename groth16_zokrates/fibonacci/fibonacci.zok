@@ -1,0 +1,11 @@
+def main(u64 expected_result) -> u64 {
+    u64 mut a = 1;
+    u64 mut b = 1;
+    for u32 i in 2..64 {
+        u64 next = a + b;
+        a = b;
+        b = next;
+    }
+    assert(b == expected_result);
+    return b;
+}

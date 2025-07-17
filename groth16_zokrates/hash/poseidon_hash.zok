@@ -1,0 +1,7 @@
+import "hashes/poseidon/poseidon";
+
+def main(private field input, field publicHash) {
+    field computedHash = poseidon([input]);
+    assert(computedHash == publicHash);
+    return;
+}

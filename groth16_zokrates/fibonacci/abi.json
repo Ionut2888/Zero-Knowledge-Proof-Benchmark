@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    {
+      "name": "expected_result",
+      "public": true,
+      "type": "u64"
+    }
+  ],
+  "output": {
+    "type": "u64"
+  }
+}
