@@ -1,0 +1,10 @@
+[package]
+name = "stark_winterfell"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hex = "0.4"
+rand = "0.8"
+winterfell = { git = "https://github.com/novifinancial/winterfell.git", branch = "main" }
+winter-crypto = { git = "https://github.com/novifinancial/winterfell.git", branch = "main", package = "winter-crypto" }
